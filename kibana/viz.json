@@ -1,0 +1,86 @@
+[
+  {
+    "_id": "73addeb0-522d-11e7-a8b9-ed3083a52aef",
+    "_type": "visualization",
+    "_source": {
+      "title": "Humidity Gauge",
+      "visState": "{\"title\":\"Humidity Gauge\",\"type\":\"metrics\",\"params\":{\"id\":\"335872d0-522d-11e7-a8b9-ed3083a52aef\",\"type\":\"gauge\",\"series\":[{\"id\":\"335872d1-522d-11e7-a8b9-ed3083a52aef\",\"color\":\"rgba(0,98,177,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"335872d2-522d-11e7-a8b9-ed3083a52aef\",\"type\":\"avg\",\"field\":\"humidity\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"location\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"temperature\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"background_color_rules\":[{\"id\":\"517a3960-522d-11e7-a8b9-ed3083a52aef\"}],\"bar_color_rules\":[{\"id\":\"524159f0-522d-11e7-a8b9-ed3083a52aef\"}],\"gauge_color_rules\":[{\"id\":\"53640800-522d-11e7-a8b9-ed3083a52aef\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"gauge_max\":\"100\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "a48b7ba0-522d-11e7-a8b9-ed3083a52aef",
+    "_type": "visualization",
+    "_source": {
+      "title": "Temperature Gauge",
+      "visState": "{\"title\":\"Temperature Gauge\",\"type\":\"metrics\",\"params\":{\"id\":\"335872d0-522d-11e7-a8b9-ed3083a52aef\",\"type\":\"gauge\",\"series\":[{\"id\":\"335872d1-522d-11e7-a8b9-ed3083a52aef\",\"color\":\"rgba(244,78,59,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"335872d2-522d-11e7-a8b9-ed3083a52aef\",\"type\":\"avg\",\"field\":\"temp_c\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"location\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"temperature\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"background_color_rules\":[{\"id\":\"517a3960-522d-11e7-a8b9-ed3083a52aef\"}],\"bar_color_rules\":[{\"id\":\"524159f0-522d-11e7-a8b9-ed3083a52aef\"}],\"gauge_color_rules\":[{\"id\":\"53640800-522d-11e7-a8b9-ed3083a52aef\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"gauge_max\":\"35\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "b3d77b40-520f-11e7-ae77-27bda7f21920",
+    "_type": "visualization",
+    "_source": {
+      "title": "Temp By Location",
+      "visState": "{\"title\":\"Temp By Location\",\"type\":\"line\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Time\"},\"type\":\"category\"}],\"defaultYExtents\":false,\"drawLinesBetweenPoints\":true,\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"interpolate\":\"linear\",\"legendPosition\":\"right\",\"radiusRatio\":9,\"scale\":\"linear\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Celsius\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"cardinal\",\"lineWidth\":2,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"setYExtents\":false,\"showCircles\":true,\"times\":[],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"defaultYExtents\":true,\"mode\":\"normal\",\"setYExtents\":false,\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Celsius\"},\"type\":\"value\"}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"temp_c\",\"customLabel\":\"Celsius\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Time\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"location.keyword\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"_term\",\"customLabel\":\"\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"temperature\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "8fa9dd70-528d-11e7-8811-e52ad49b4bb0",
+    "_type": "visualization",
+    "_source": {
+      "title": "Temp vs. Humidity",
+      "visState": "{\"title\":\"Temp vs. Humidity\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=temperature, avg:humidity).lines(width=1).label(\\\"Humidity %\\\").color(blue).yaxis(yaxis=1,label=\\\"Humidity %\\\"),.es(index=temperature, avg:temp_c).lines(width=1).label(\\\"Celsius\\\").color(red).yaxis(yaxis=2,label=\\\"Celsius\\\"),.es(index=temperature, avg:temp_c,offset=-1d).lines(width=1).yaxis(yaxis=2).color(pink).label(\\\"Yesterday C\\\"),.es(index=temperature, avg:humidity,offset=-1d).lines(width=1).yaxis(yaxis=1).color(lightblue).label(\\\"Yesterday %\\\")\",\"interval\":\"auto\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "a48b7ba0-522d-11e7-a8b9-ed3083a52aef",
+    "_type": "visualization",
+    "_source": {
+      "title": "Temperature Gauge",
+      "visState": "{\"title\":\"Temperature Gauge\",\"type\":\"metrics\",\"params\":{\"id\":\"335872d0-522d-11e7-a8b9-ed3083a52aef\",\"type\":\"gauge\",\"series\":[{\"id\":\"335872d1-522d-11e7-a8b9-ed3083a52aef\",\"color\":\"rgba(244,78,59,1)\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"335872d2-522d-11e7-a8b9-ed3083a52aef\",\"type\":\"avg\",\"field\":\"temp_c\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"location\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"temperature\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"background_color_rules\":[{\"id\":\"517a3960-522d-11e7-a8b9-ed3083a52aef\"}],\"bar_color_rules\":[{\"id\":\"524159f0-522d-11e7-a8b9-ed3083a52aef\"}],\"gauge_color_rules\":[{\"id\":\"53640800-522d-11e7-a8b9-ed3083a52aef\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"gauge_max\":\"35\"},\"aggs\":[],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "5bcc6ad0-5289-11e7-9549-61f21e9c2897",
+    "_type": "visualization",
+    "_source": {
+      "title": "Temperature Timelion",
+      "visState": "{\"type\":\"timelion\",\"title\":\"Temperature Timelion\",\"params\":{\"expression\":\".es(index=temperature, avg:temp_c).holt(0.1, 0.2).lines(width=5).label(\\\"Predicted C\\\").color(orange),.es(index=temperature,avg:temp_c).label(\\\"Change C\\\").derivative().bars().color(green),.es(index=temperature,avg:temp_c).movingaverage(5).lines(width=2).label(\\\"Moving Avg\\\").color(grey),.es(index=temperature, avg:temp_c).lines(width=1).label(\\\"Actual C\\\").color(red),.es('temp_c:>26 OR temp_c:<18').if(eq,0,null).points(3, symbol=diamond).color(red).label(\\\"Uncomfortable\\\").color(black)\",\"interval\":\"auto\"}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  }
+]

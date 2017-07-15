@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "d5f575b0-520f-11e7-ae77-27bda7f21920",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Temp/Humidity Sensors",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"b3d77b40-520f-11e7-ae77-27bda7f21920\",\"panelIndex\":1,\"row\":3,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"a0390d10-520f-11e7-ae77-27bda7f21920\",\"panelIndex\":2,\"row\":3,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"73addeb0-522d-11e7-a8b9-ed3083a52aef\",\"panelIndex\":3,\"row\":1,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"a48b7ba0-522d-11e7-a8b9-ed3083a52aef\",\"panelIndex\":4,\"row\":1,\"size_x\":6,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"8fa9dd70-528d-11e7-8811-e52ad49b4bb0\",\"panelIndex\":5,\"row\":7,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-4h",
+      "refreshInterval": {
+        "display": "30 seconds",
+        "pause": false,
+        "section": 1,
+        "value": 30000
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  }
+]
